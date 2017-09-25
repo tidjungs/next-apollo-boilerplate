@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "scss$"]
+      }
+    ]
+  ],
+  "presets": [
+    "next/babel"
+  ],
+  "ignore": [],
+  "env": {
+   "test": {
+     "presets": [
+       ["env", { "modules": "commonjs" }],
+       "next/babel"
+     ]
+   }
+ }
+}

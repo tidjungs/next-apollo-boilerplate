@@ -13,14 +13,12 @@ class Index extends Component {
 }
 
 Index.propTypes = {
-  test: PropTypes.string  
+  test: PropTypes.string,
 };
 
 const mapStateToProps = ({ index }) => ({
-  test: index.test
+  test: index.test,
 });
-
-
 
 const IndexWithRedux = withRedux(initStore, mapStateToProps, null)(Index);
 

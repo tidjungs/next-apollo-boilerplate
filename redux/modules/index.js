@@ -1,5 +1,5 @@
 const InitialState = {
-  test: 'hello world'
+  test: 'hello world',
 };
 
 const actionTypes = {};

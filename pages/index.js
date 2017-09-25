@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withRedux from 'next-redux-wrapper';
 import { bindActionCreators } from 'redux';
+import styled from 'styled-components';
 import initStore from '../redux/store';
+
+const Title = styled.h1`
+  color: red;
+  font-size: 50px;
+`;
 
 class Index extends Component {
   render() {
     return (
-      <div>{ this.props.test }</div>
+      <div>
+        <Title>{this.props.test}</Title>
+      </div>
     );
   }
 }

@@ -1,4 +1,6 @@
-const routes = module.exports = require('next-routes')();
+const routes = require('next-routes')();
 
-routes
-  .add('index');
+routes.add('index');
+routes.add('details', '/details/:postId');
+
+module.exports = routes;

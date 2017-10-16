@@ -2,12 +2,6 @@ import React from 'react';
 import { gql, graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import styled from 'styled-components';
-
-const Title = styled.h1`
-  color: red;
-  font-size: 20px;
-`;
 
 const LandingPage = ({ data: { loading, error, todos } }) => {
   if (loading) {
@@ -18,13 +12,13 @@ const LandingPage = ({ data: { loading, error, todos } }) => {
   }
   return (
     <div>
-      <Title>
+      <div>
         {
-          todos.map((todo, index) => (
-            <p key={index}>{todo.text}</p>
+          todos.map(todo => (
+            <p>{todo.text}</p>
           ))
         }
-      </Title>
+      </div>
     </div>
   );
 };

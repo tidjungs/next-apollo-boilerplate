@@ -8,7 +8,6 @@ const handle = routes.getRequestHandler(app);
 app.prepare()
   .then(() => {
     const server = express();
-
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(3000, (err) => {

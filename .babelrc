@@ -1,15 +1,16 @@
 {
   "plugins": [
     [
-      "styled-components", 
-      { "ssr": true, "displayName": true, "preprocess": false } 
-    ],    
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
+    ],
     [
       "wrap-in-js",
       {
         "extensions": ["css$", "scss$"]
       }
-    ]
+    ],
+    "transform-class-properties"
   ],
   "presets": [
     "next/babel",

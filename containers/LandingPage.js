@@ -1,30 +1,49 @@
 import React from 'react';
+import { gql, graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
 
 const Title = styled.h1`
   color: red;
-  font-size: 50px;
+  font-size: 20px;
 `;
 
-const LandingPage = (props) => {
+const LandingPage = ({ data: { loading, error, todos } }) => {
+  if (loading) {
+    return <p>Loading ...</p>;
+  }
+  if (error) {
+    return <p>{error.message}</p>;
+  }
   return (
     <div>
-      <Title>{props.test}</Title>
+      <Title>
+        {
+          todos.map((todo, index) => (
+            <p key={index}>{todo.text}</p>
+          ))
+        }
+      </Title>
     </div>
   );
 };
 
 LandingPage.propTypes = {
-  test: PropTypes.string,
+  data: PropTypes.object,
 };
 
-const mapStateToProps = ({ index }) => ({
-  test: index.test,
-});
+export const todosListQuery = gql`
+  query TodosListQuery {
+    todos {
+      id
+      text
+    }
+  }
+`;
 
 export default compose(
-  connect(mapStateToProps),
+  graphql(todosListQuery, {
+    options: {},
+  }),
 )(LandingPage);

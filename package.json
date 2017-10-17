@@ -27,11 +27,7 @@
     "react": "^16.0.0",
     "react-apollo": "^1.4.16",
     "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
-    "recompose": "^0.26.0",
-    "redux": "^3.7.2",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-thunk": "^2.2.0"
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

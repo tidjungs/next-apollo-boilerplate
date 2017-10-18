@@ -1,11 +1,5 @@
 {
   "plugins": [
-    [
-      "wrap-in-js",
-      {
-        "extensions": ["css$", "scss$"]
-      }
-    ],
     "transform-class-properties"
   ],
   "presets": [

@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default () => (
-  <header>
+  <footer>
     <div>
       Footer
     </div>
-  </header>
+  </footer>
 );

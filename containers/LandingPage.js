@@ -15,7 +15,7 @@ const LandingPage = ({ data: { loading, error, todos } }) => {
       <div>
         {
           todos.map(todo => (
-            <p>{todo.text}</p>
+            <p key={todo.id}>{todo.text}</p>
           ))
         }
       </div>

@@ -2,6 +2,7 @@ import express from 'express';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+// import graphQL from 'graphql';
 
 import schema from './schema';
 

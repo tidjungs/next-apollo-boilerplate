@@ -7,7 +7,8 @@ git clone https://github.com/tidjungs/next-apollo-boilerplate.git
 cd next-apollo-boilerplate
 yarn install
 ```
-After everything is finished, run `yarn dev`
+After everything is finished, run `yarn server` for graphql server
+and run `yarn dev` for developing client side
 
 ## License
 

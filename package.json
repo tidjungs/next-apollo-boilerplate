@@ -7,7 +7,7 @@
     "test": "jest",
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "test:watch": "jest --watch",
     "server": "node graphql-dummy-server/server"
   },

@@ -28,7 +28,7 @@ LandingPage.propTypes = {
   data: PropTypes.object,
 };
 
-export const todosListQuery = gql`
+const todosListQuery = gql`
   {
     todos {
       id

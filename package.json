@@ -7,9 +7,10 @@
     "test": "jest",
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "test:watch": "jest --watch",
-    "server": "node graphql-dummy-server/server"
+    "server": "node graphql-dummy-server/server",
+    "start:all": "npm-run-all --parallel start server"
   },
   "author": "Waewprach Suthirawut <handmakersbkk@gmail.com> (https://github.com/tidjungs)",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "isomorphic-fetch": "^2.2.1",
     "next": "^4.0.3",
     "next-routes": "^1.0.40",
+    "npm-run-all": "^4.1.1",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-apollo": "^1.4.16",
